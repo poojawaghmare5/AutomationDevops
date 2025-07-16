@@ -2,39 +2,33 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="3" parallel="tests" name="Failed suite [Selenium Grid Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="3" parallel="tests" name="Edge Test(failed)">
-    <parameter name="browser" value="edge"/>
+    <parameter name="bname" value="edge"/>
     <classes>
       <class name="seleniumGrid.AmazonTest">
         <methods>
-          <include name="amazonTest"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="BrowserTest" invocation-numbers="0"/>
         </methods>
       </class> <!-- seleniumGrid.AmazonTest -->
     </classes>
   </test> <!-- Edge Test(failed) -->
-  <test thread-count="3" parallel="tests" name="Chrome Test(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="seleniumGrid.AmazonTest">
-        <methods>
-          <include name="amazonTest"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- seleniumGrid.AmazonTest -->
-    </classes>
-  </test> <!-- Chrome Test(failed) -->
   <test thread-count="3" parallel="tests" name="Firefox Test(failed)">
-    <parameter name="browser" value="firefox"/>
+    <parameter name="bname" value="firefox"/>
     <classes>
       <class name="seleniumGrid.AmazonTest">
         <methods>
-          <include name="amazonTest"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="BrowserTest" invocation-numbers="0"/>
         </methods>
       </class> <!-- seleniumGrid.AmazonTest -->
     </classes>
   </test> <!-- Firefox Test(failed) -->
+  <test thread-count="3" parallel="tests" name="Chrome Test(failed)">
+    <parameter name="bname" value="chrome"/>
+    <classes>
+      <class name="seleniumGrid.AmazonTest">
+        <methods>
+          <include name="BrowserTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- seleniumGrid.AmazonTest -->
+    </classes>
+  </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [Selenium Grid Suite] -->
